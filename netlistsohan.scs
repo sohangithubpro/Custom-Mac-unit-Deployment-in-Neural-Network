@@ -1,0 +1,279 @@
+// Generated for: spectre
+// Generated on: Mar 18 13:58:49 2024
+// Design library name: 20BEC1190_ASIC
+// Design cell name: stdcelllib
+// Design view name: schematic
+simulator lang=spectre
+global 0 vdd!
+include "/home/install/FOUNDRY/analog/180nm/models/spectre/gpdk.scs" section=stat
+
+// Library name: 20BEC1190asicextracted20BEC1190_ASIC
+// Cell name: INV_rcx
+// View name: av_extracted
+// View type: maskLayout
+subckt INV_rcx A Out 0 vdd!
+    c1 (vdd! 0) capacitor c=1.23856e-16
+    c2 (A 0) capacitor c=1.39675e-16
+    c3 (Out 0) capacitor c=2.39752e-16
+    c4 (\1\:A 0) capacitor c=2.54588e-16
+    c5 (\4\:A 0) capacitor c=2.02136e-16
+    c6 (\3\:A 0) capacitor c=3.9344e-16
+    c7 (\5\:vdd! 0) capacitor c=1.84239e-16
+    c8 (\2\:Out 0) capacitor c=3.34194e-16
+    c9 (\7\:vdd! 0) capacitor c=6.34723e-17
+    c10 (\3\:Out 0) capacitor c=3.68428e-16
+    c11 (\6\:vdd! 0) capacitor c=2.08935e-16
+    c12 (\4\:vdd! 0) capacitor c=2.13425e-16
+    c13 (\1\:vdd! 0) capacitor c=1.8747e-16
+    c14 (\2\:vdd! 0) capacitor c=2.22585e-16
+    c15 (\3\:vdd! 0) capacitor c=2.19821e-16
+    c16 (\1\:Out 0) capacitor c=3.2174e-16
+    c17 (\2\:A 0) capacitor c=2.74435e-16
+    rf1 (A \3\:A) resistor r=5.59333 w=3e-07 c=0
+    rf2 (\1\:vdd! \2\:vdd!) resistor r=1.03249 w=3e-07 c=0
+    rf3 (\2\:vdd! vdd!) resistor r=0.571821 w=3e-07 c=0
+    rf4 (vdd! \3\:vdd!) resistor r=0.343488 w=3e-07 c=0
+    rf5 (\3\:vdd! \4\:vdd!) resistor r=1.26099 w=3e-07 c=0
+    rf6 (\2\:vdd! \5\:vdd!) resistor r=2.20262 w=4e-07 c=0
+    rf7 (vdd! \6\:vdd!) resistor r=2.24 w=4e-07 c=0
+    rf8 (\3\:vdd! \7\:vdd!) resistor r=2.20262 w=4e-07 c=0
+    rf9 (\1\:gnd! \2\:gnd!) resistor r=0.778547 w=4e-07 c=0
+    rf10 (\2\:gnd! 0) resistor r=0.425547 w=4e-07 c=0
+    rf11 (0 \3\:gnd!) resistor r=0.261797 w=4e-07 c=0
+    rf12 (\3\:gnd! \4\:gnd!) resistor r=0.942422 w=4e-07 c=0
+    rf13 (\2\:gnd! \5\:gnd!) resistor r=2.38409 w=4e-07 c=0
+    rf14 (0 \6\:gnd!) resistor r=2.425 w=4e-07 c=0
+    rf15 (\3\:gnd! \7\:gnd!) resistor r=2.38409 w=4e-07 c=0
+    rf16 (Out \1\:Out) resistor r=1.27451 w=3e-07 c=0
+    rf17 (\1\:Out \2\:Out) resistor r=2.23293 w=4e-07 c=0
+    rf18 (\1\:Out \3\:Out) resistor r=2.43005 w=4e-07 c=0
+    rg1 (\1\:A \2\:A) resistor r=72.1795 w=1.8e-07 c=0
+    rg2 (\2\:A \3\:A) resistor r=122.441 w=1.8e-07 c=0
+    rg3 (\2\:A \4\:A) resistor r=38.9976 w=1.8e-07 c=0
+    PM0 (\3\:Out \1\:A \6\:vdd! \5\:vdd!) pmos1 w=2e-06 l=1.8e-07 \
+        as=1.2e-12 ad=1.2e-12 ps=5.2e-06 pd=5.2e-06 m=(1)*(1)
+    NM0 (\2\:Out \4\:A \6\:gnd! \5\:gnd!) nmos1 w=2e-06 l=1.8e-07 \
+        as=1.2e-12 ad=1.2e-12 ps=5.2e-06 pd=5.2e-06 m=(1)*(1)
+ends INV_rcx
+// End of subcircuit definition.
+
+// Library name: 20BEC1190_ASIC
+// Cell name: INV
+// View name: av_extracted
+// View type: maskLayout
+subckt INV A Out
+    INV (A Out 0 vdd!) INV_rcx
+ends INV
+// End of subcircuit definition.
+
+// Library name: 20BEC1190asicextracted20BEC1190_ASIC
+// Cell name: NAND_rcx
+// View name: av_extracted
+// View type: maskLayout
+subckt NAND_rcx A B Clk Out 0 vdd!
+    c1 (vdd! 0) capacitor c=6.4965e-17
+    c2 (A 0) capacitor c=1.19859e-16
+    c3 (B 0) capacitor c=1.916e-16
+    c4 (Out 0) capacitor c=5.07384e-16
+    c5 (net1 0) capacitor c=2.15176e-16
+    c6 (net4 0) capacitor c=1.71438e-15
+    c7 (net3 0) capacitor c=1.0879e-15
+    c8 (\1\:B 0) capacitor c=5.4852e-16
+    c9 (\4\:net1 0) capacitor c=3.18778e-16
+    c10 (\1\:A 0) capacitor c=3.56332e-16
+    c11 (\2\:B 0) capacitor c=6.58585e-16
+    c12 (\2\:A 0) capacitor c=4.11877e-16
+    c13 (\6\:vdd! 0) capacitor c=2.03285e-16
+    c14 (\2\:net3 0) capacitor c=1.07376e-15
+    c15 (\8\:vdd! 0) capacitor c=9.03718e-17
+    c16 (\2\:Out 0) capacitor c=9.09568e-16
+    c17 (\2\:net4 0) capacitor c=1.96349e-15
+    c18 (\3\:Out 0) capacitor c=5.49575e-16
+    c19 (\7\:vdd! 0) capacitor c=2.33243e-16
+    c20 (\1\:Out 0) capacitor c=1.19725e-15
+    c21 (\5\:vdd! 0) capacitor c=4.39213e-16
+    c22 (\1\:vdd! 0) capacitor c=5.22754e-16
+    c23 (\2\:vdd! 0) capacitor c=5.48755e-16
+    c24 (\3\:vdd! 0) capacitor c=1.35347e-16
+    c25 (\4\:vdd! 0) capacitor c=4.77908e-16
+    c26 (\3\:net1 0) capacitor c=9.09116e-16
+    c27 (\2\:net1 0) capacitor c=1.24039e-15
+    re1 (\2\:gnd! \17\:gnd!) resistor r=5.30712 w=4e-07 c=0
+    re2 (\4\:gnd! \22\:gnd!) resistor r=5.73144 w=3e-07 c=0
+    re3 (\6\:gnd! \20\:gnd!) resistor r=4.4425 w=4e-07 c=0
+    re4 (\7\:gnd! \24\:gnd!) resistor r=6.85712 w=4e-07 c=0
+    re5 (\10\:gnd! \18\:gnd!) resistor r=4.665 w=4e-07 c=0
+    rf1 (A \2\:A) resistor r=5.44667 w=3e-07 c=0
+    rf2 (\1\:gnd! \2\:gnd!) resistor r=2.335 w=4e-07 c=0
+    rf3 (\3\:gnd! \4\:gnd!) resistor r=3.01675 w=4e-07 c=0
+    rf4 (\5\:gnd! \6\:gnd!) resistor r=2.63587 w=4e-07 c=0
+    rf5 (\7\:gnd! \8\:gnd!) resistor r=3.25425 w=4e-07 c=0
+    rf6 (\9\:gnd! \10\:gnd!) resistor r=2.66962 w=4e-07 c=0
+    rf7 (net3 \2\:net3) resistor r=6.44359 w=4e-07 c=0
+    rf8 (net4 \2\:net4) resistor r=9.08157 w=4e-07 c=0
+    rf9 (Out \1\:Out) resistor r=3.30242 w=3e-07 c=0
+    rf10 (\1\:Out \2\:Out) resistor r=4.60551 w=4e-07 c=0
+    rf11 (\1\:Out \3\:Out) resistor r=3.09655 w=4e-07 c=0
+    rf12 (\11\:gnd! \12\:gnd!) resistor r=6.49934 w=3e-07 c=0
+    rf13 (\12\:gnd! 0) resistor r=0.430988 w=3e-07 c=0
+    rf14 (0 \13\:gnd!) resistor r=0.195988 w=3e-07 c=0
+    rf15 (\13\:gnd! \14\:gnd!) resistor r=0.670309 w=3e-07 c=0
+    rf16 (\14\:gnd! \15\:gnd!) resistor r=0.861976 w=3e-07 c=0
+    rf17 (\15\:gnd! \16\:gnd!) resistor r=1.17198 w=3e-07 c=0
+    rf18 (\16\:gnd! \17\:gnd!) resistor r=0.991889 w=3e-07 c=0
+    rf19 (\12\:gnd! \18\:gnd!) resistor r=0.680998 w=4e-07 c=0
+    rf20 (\13\:gnd! \19\:gnd!) resistor r=0.323498 w=4e-07 c=0
+    rf21 (\14\:gnd! \20\:gnd!) resistor r=0.170125 w=4e-07 c=0
+    rf22 (\15\:gnd! \21\:gnd!) resistor r=0.121201 w=4e-07 c=0
+    rf23 (\21\:gnd! \22\:gnd!) resistor r=0.668477 w=3e-07 c=0
+    rf24 (\16\:gnd! \23\:gnd!) resistor r=3.02263 w=4e-07 c=0
+    rf25 (\21\:gnd! \24\:gnd!) resistor r=0.35149 w=4e-07 c=0
+    rf26 (B \2\:B) resistor r=5.95667 w=3e-07 c=0
+    rf27 (\1\:vdd! \2\:vdd!) resistor r=3.53415 w=3e-07 c=0
+    rf28 (\2\:vdd! vdd!) resistor r=0.150988 w=3e-07 c=0
+    rf29 (vdd! \3\:vdd!) resistor r=0.430988 w=3e-07 c=0
+    rf30 (\3\:vdd! \4\:vdd!) resistor r=0.321976 w=3e-07 c=0
+    rf31 (\4\:vdd! \5\:vdd!) resistor r=2.92099 w=3e-07 c=0
+    rf32 (\2\:vdd! \6\:vdd!) resistor r=2.38013 w=4e-07 c=0
+    rf33 (\3\:vdd! \7\:vdd!) resistor r=2.38013 w=4e-07 c=0
+    rf34 (\4\:vdd! \8\:vdd!) resistor r=2.38013 w=4e-07 c=0
+    rg1 (\1\:A \2\:A) resistor r=150.672 w=1.8e-07 c=0
+    rg2 (net1 \2\:net1) resistor r=55.063 w=1.8e-07 c=0
+    rg3 (\2\:net1 \3\:net1) resistor r=151.496 w=5.55e-07 c=0
+    rg4 (\2\:net1 \4\:net1) resistor r=123.813 w=1.8e-07 c=0
+    rg5 (\1\:B \2\:B) resistor r=257.224 w=1.8e-07 c=0
+    PM0 (\3\:Out net1 \7\:vdd! \6\:vdd!) pmos1 w=2e-06 l=1.8e-07 \
+        as=1.2e-12 ad=1.2e-12 ps=5.2e-06 pd=5.2e-06 m=(1)*(1)
+    NM0 (\2\:Out \1\:A \2\:net4 \1\:gnd!) nmos1 w=2e-06 l=1.8e-07 \
+        as=1.2e-12 ad=1.2e-12 ps=5.2e-06 pd=5.2e-06 m=(1)*(1)
+    NM2 (\2\:net3 \4\:net1 \5\:gnd! \8\:gnd!) nmos1 w=2e-06 l=1.8e-07 \
+        as=1.2e-12 ad=1.2e-12 ps=5.2e-06 pd=5.2e-06 m=(1)*(1)
+    NM1 (net4 \1\:B net3 \11\:gnd!) nmos1 w=2e-06 l=1.8e-07 as=1.2e-12 \
+        ad=1.2e-12 ps=5.2e-06 pd=5.2e-06 m=(1)*(1)
+ends NAND_rcx
+// End of subcircuit definition.
+
+// Library name: 20BEC1190_ASIC
+// Cell name: NAND
+// View name: av_extracted
+// View type: maskLayout
+subckt NAND A B Out
+    NAND (A B Clk Out 0 vdd!) NAND_rcx
+ends NAND
+// End of subcircuit definition.
+
+// Library name: 20BEC1190asicextracted20BEC1190_ASIC
+// Cell name: NOR_rcx
+// View name: av_extracted
+// View type: maskLayout
+subckt NOR_rcx A B Clk Out 0 vdd!
+    c1 (vdd! 0) capacitor c=6.42344e-17
+    c2 (A 0) capacitor c=1.48479e-16
+    c3 (B 0) capacitor c=1.40143e-16
+    c4 (Out 0) capacitor c=3.36805e-16
+    c5 (net3 0) capacitor c=3.10257e-16
+    c6 (avC7 0) capacitor c=3.06347e-16
+    c7 (net1 0) capacitor c=3.72642e-16
+    c8 (\1\:B 0) capacitor c=6.97531e-16
+    c9 (\4\:net3 0) capacitor c=3.01145e-16
+    c10 (\1\:A 0) capacitor c=3.98273e-16
+    c11 (\8\:net1 0) capacitor c=5.933e-16
+    c12 (\6\:net1 0) capacitor c=7.9915e-16
+    c13 (\4\:net1 0) capacitor c=4.38015e-16
+    c14 (\3\:net1 0) capacitor c=4.18404e-16
+    c15 (\2\:net1 0) capacitor c=3.13564e-16
+    c16 (\2\:B 0) capacitor c=7.94573e-16
+    c17 (\2\:A 0) capacitor c=5.21827e-16
+    c18 (\3\:Out 0) capacitor c=3.67361e-16
+    c19 (\7\:net1 0) capacitor c=4.81017e-16
+    c20 (\6\:vdd! 0) capacitor c=2.20984e-16
+    c21 (\5\:net1 0) capacitor c=5.22292e-16
+    c22 (\8\:vdd! 0) capacitor c=9.19938e-17
+    c23 (\2\:Out 0) capacitor c=1.45645e-15
+    c24 (\7\:vdd! 0) capacitor c=2.1868e-16
+    c25 (\1\:Out 0) capacitor c=1.53067e-15
+    c26 (\5\:vdd! 0) capacitor c=6.41727e-16
+    c27 (\1\:vdd! 0) capacitor c=7.17465e-16
+    c28 (\2\:vdd! 0) capacitor c=7.79276e-16
+    c29 (\3\:vdd! 0) capacitor c=1.48692e-16
+    c30 (\4\:vdd! 0) capacitor c=7.05566e-16
+    c31 (\3\:net3 0) capacitor c=1.3718e-15
+    c32 (\2\:net3 0) capacitor c=2.00454e-15
+    re1 (\3\:net1 \2\:net1) resistor r=4.81875 w=4e-07 c=0
+    re2 (\8\:net1 \6\:net1) resistor r=4.05125 w=4e-07 c=0
+    re3 (\6\:net1 \4\:net1) resistor r=3.42833 w=3e-07 c=0
+    rf1 (A \2\:A) resistor r=5.65667 w=3e-07 c=0
+    rf2 (net1 \2\:net1) resistor r=2.42375 w=4e-07 c=0
+    rf3 (\3\:net1 \4\:net1) resistor r=1.12033 w=3e-07 c=0
+    rf4 (\5\:net1 \6\:net1) resistor r=4.81875 w=4e-07 c=0
+    rf5 (\7\:net1 \8\:net1) resistor r=2.79919 w=4e-07 c=0
+    rf6 (B \2\:B) resistor r=5.635 w=3e-07 c=0
+    rf7 (Out \1\:Out) resistor r=1.98137 w=3e-07 c=0
+    rf8 (\1\:Out \2\:Out) resistor r=7.56068 w=4e-07 c=0
+    rf9 (\1\:Out \3\:Out) resistor r=2.38542 w=4e-07 c=0
+    rf10 (\1\:gnd! \2\:gnd!) resistor r=0.959017 w=6.05e-07 c=0
+    rf11 (\2\:gnd! \3\:gnd!) resistor r=0.455389 w=6.05e-07 c=0
+    rf12 (\3\:gnd! \4\:gnd!) resistor r=1.02316 w=6.05e-07 c=0
+    rf13 (\4\:gnd! 0) resistor r=0.089265 w=6.05e-07 c=0
+    rf14 (0 \5\:gnd!) resistor r=0.200835 w=6.05e-07 c=0
+    rf15 (\5\:gnd! \6\:gnd!) resistor r=0.161174 w=6.05e-07 c=0
+    rf16 (\6\:gnd! \7\:gnd!) resistor r=1.17192 w=6.05e-07 c=0
+    rf17 (\7\:gnd! \8\:gnd!) resistor r=0.455389 w=6.05e-07 c=0
+    rf18 (\8\:gnd! \9\:gnd!) resistor r=0.53348 w=6.05e-07 c=0
+    rf19 (\2\:gnd! \10\:gnd!) resistor r=4.12032 w=4e-07 c=0
+    rf20 (\3\:gnd! \11\:gnd!) resistor r=4.12032 w=4e-07 c=0
+    rf21 (\4\:gnd! \12\:gnd!) resistor r=4.13282 w=4e-07 c=0
+    rf22 (\5\:gnd! \13\:gnd!) resistor r=4.13282 w=4e-07 c=0
+    rf23 (\6\:gnd! \14\:gnd!) resistor r=4.13282 w=4e-07 c=0
+    rf24 (\7\:gnd! \15\:gnd!) resistor r=4.11532 w=4e-07 c=0
+    rf25 (\8\:gnd! \16\:gnd!) resistor r=4.11532 w=4e-07 c=0
+    rf26 (\1\:vdd! \2\:vdd!) resistor r=4.93082 w=3e-07 c=0
+    rf27 (\2\:vdd! vdd!) resistor r=0.178488 w=3e-07 c=0
+    rf28 (vdd! \3\:vdd!) resistor r=0.403488 w=3e-07 c=0
+    rf29 (\3\:vdd! \4\:vdd!) resistor r=0.321976 w=3e-07 c=0
+    rf30 (\4\:vdd! \5\:vdd!) resistor r=4.37265 w=3e-07 c=0
+    rf31 (\2\:vdd! \6\:vdd!) resistor r=2.58513 w=4e-07 c=0
+    rf32 (\3\:vdd! \7\:vdd!) resistor r=2.58513 w=4e-07 c=0
+    rf33 (\4\:vdd! \8\:vdd!) resistor r=2.58513 w=4e-07 c=0
+    rg1 (\1\:A \2\:A) resistor r=157.385 w=1.8e-07 c=0
+    rg2 (net3 \2\:net3) resistor r=140.796 w=1.8e-07 c=0
+    rg3 (\2\:net3 \3\:net3) resistor r=183.92 w=6.8e-07 c=0
+    rg4 (\2\:net3 \4\:net3) resistor r=138.921 w=1.8e-07 c=0
+    rg5 (\1\:B \2\:B) resistor r=312.968 w=1.8e-07 c=0
+    PM0 (avC7 net3 \7\:vdd! \6\:vdd!) pmos1 w=2e-06 l=1.8e-07 as=1.2e-12 \
+        ad=1.2e-12 ps=5.2e-06 pd=5.2e-06 m=(1)*(1)
+    NM0 (\2\:Out \1\:A net1 \15\:gnd!) nmos1 w=2e-06 l=1.8e-07 as=1.2e-12 \
+        ad=1.2e-12 ps=5.2e-06 pd=5.2e-06 m=(1)*(1)
+    NM2 (\5\:net1 \4\:net3 \13\:gnd! \12\:gnd!) nmos1 w=2e-06 l=1.8e-07 \
+        as=1.2e-12 ad=1.2e-12 ps=5.2e-06 pd=5.2e-06 m=(1)*(1)
+    NM1 (\3\:Out \1\:B \7\:net1 \10\:gnd!) nmos1 w=2e-06 l=1.8e-07 \
+        as=1.2e-12 ad=1.2e-12 ps=5.2e-06 pd=5.2e-06 m=(1)*(1)
+ends NOR_rcx
+// End of subcircuit definition.
+
+// Library name: 20BEC1190_ASIC
+// Cell name: NOR
+// View name: av_extracted
+// View type: maskLayout
+subckt NOR A B Out
+    NOR (A B Clk Out 0 vdd!) NOR_rcx
+ends NOR
+// End of subcircuit definition.
+
+// Library name: 20BEC1190_ASIC
+// Cell name: stdcelllib
+// View name: schematic
+I0 (A Out1) INV
+I1 (A B Out2) NAND
+I2 (A B Out3) NOR
+simulatorOptions options psfversion="1.4.0" reltol=1e-3 vabstol=1e-6 \
+    iabstol=1e-12 temp=27 tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 \
+    maxnotes=5 maxwarns=5 digits=5 cols=80 pivrel=1e-3 \
+    sensfile="../psf/sens.output" checklimitdest=psf 
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+saveOptions options save=allpub
