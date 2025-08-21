@@ -1,4 +1,4 @@
-# On-Chip Neural Network for Handwritten Digit Recognition
+# Custom MAC unit deployment in Neural Network
 
 This project explores the integration of neural networks directly into hardware platforms for efficient, real-time character recognition. Using the **MNIST dataset** (70,000+ labeled images), we design and implement an **on-chip neural network (NN)** that classifies handwritten digits for applications such as automated document processing, digital assistants, and biometric authentication.
 
